@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // Helper: render dynamic project cards from JSON and attach role metadata
     fetch('data/projects.json').then(r=>r.json()).then(list=>{
       projectsContainer.innerHTML = '';
+      // render selected project cards
       list.forEach(p=>{
         const card = document.createElement('article');
         card.className = 'project-card';
@@ -42,11 +43,11 @@ document.addEventListener('DOMContentLoaded',function(){
         const img = document.createElement('img');
         img.src = p.image || 'assets/images/avatar.jpg';
         img.alt = p.title;
-        img.style.width = '100%';
-        img.style.borderRadius = '6px';
-        img.style.marginBottom = '.5rem';
         const h3 = document.createElement('h3');
         h3.textContent = p.title;
+        const meta = document.createElement('div');
+        meta.className = 'project-meta';
+        meta.textContent = 'Role: ' + ((p.role||'').toUpperCase() || 'Web');
         const desc = document.createElement('p');
         desc.textContent = p.description;
         const a = document.createElement('a');
@@ -55,11 +56,45 @@ document.addEventListener('DOMContentLoaded',function(){
         a.textContent = 'Repo / Demo';
         card.appendChild(img);
         card.appendChild(h3);
+        card.appendChild(meta);
         card.appendChild(desc);
         card.appendChild(a);
         projectsContainer.appendChild(card);
       });
-      // After projects load, try animating metrics and ensure filters applied
+
+      // Render role sample lists (up to 3 each)
+      const renderRoleSamples = (role, containerId)=>{
+        const container = document.getElementById(containerId);
+        if(!container) return;
+        container.innerHTML = '';
+        const filtered = list.filter(p=> (p.role||'').toLowerCase() === role).slice(0,3);
+        filtered.forEach(p=>{
+          const item = document.createElement('div');
+          item.className = 'role-item';
+          const title = document.createElement('div');
+          title.className = 'role-item-title';
+          title.textContent = p.title;
+          const sd = document.createElement('div');
+          sd.className = 'role-item-desc';
+          sd.textContent = p.description;
+          item.appendChild(title);
+          item.appendChild(sd);
+          item.addEventListener('click', ()=>{
+            applyProjectFilters(role);
+            document.getElementById('projects')?.scrollIntoView({behavior:'smooth'});
+          });
+          container.appendChild(item);
+        });
+        if(filtered.length === 0){
+          container.innerHTML = '<p class="muted">No sample projects for this role yet.</p>';
+        }
+      };
+
+      renderRoleSamples('sre','roles-sre');
+      renderRoleSamples('web','roles-web');
+      renderRoleSamples('qa','roles-qa');
+
+      // After projects load, animate metrics and apply current filter
       animateMetrics();
       applyProjectFilters(currentFilter || 'all');
     }).catch(err=>{
@@ -80,18 +115,31 @@ document.addEventListener('DOMContentLoaded',function(){
         c.style.display = 'none';
       }
     });
-    // update active button state
-    document.querySelectorAll('.filter-btn').forEach(b=>{
-      b.classList.toggle('active', b.dataset.filter === role);
+    // update active button state + aria
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(b=>{
+      const active = b.dataset.filter === role;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
     });
     currentFilter = role;
   }
 
-  // Wire buttons
+  // Wire buttons with accessibility helpers
   document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.setAttribute('role','tab');
+    // initialize aria-pressed attribute
+    btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
     btn.addEventListener('click', ()=>{
       const role = btn.dataset.filter;
       applyProjectFilters(role);
+      btn.focus();
+    });
+    btn.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        btn.click();
+      }
     });
   });
 
@@ -152,7 +200,7 @@ document.addEventListener('DOMContentLoaded',function(){
   const applyPalette = (p)=>{
     document.documentElement.style.setProperty('--accent', p.accent);
     document.documentElement.style.setProperty('--accent-2', p.accent2 || p.accent);
-    if(p.bg) document.body.style.background = p.bg;
+    if(p.bg) document.documentElement.style.setProperty('--bg', p.bg);
   };
   const startPaletteRotation = ()=>{
     stopPaletteRotation();
@@ -186,9 +234,10 @@ document.addEventListener('DOMContentLoaded',function(){
         localStorage.removeItem(COLOR_KEY);
         stopPaletteRotation();
         // reset background and accent to defaults (respect theme)
-        document.body.style.background = '';
-        const themeAccent = document.body.classList.contains('light-theme') ? getComputedStyle(document.documentElement).getPropertyValue('--accent') : '';
-        document.documentElement.style.setProperty('--accent', themeAccent || '#2dd4bf');
+        // remove any inline background override (revert to CSS variable from theme)
+        document.documentElement.style.removeProperty('--bg');
+        const themeAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2dd4bf';
+        document.documentElement.style.setProperty('--accent', themeAccent);
         colorToggle.textContent = '🎨';
       }
     });

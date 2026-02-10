@@ -4,56 +4,79 @@
     "description": "Terraform + Ansible automation for multi-cloud deployments with drift detection and auto-remediation.",
     "link": "#",
     "image": "assets/images/diagram.svg",
-    "tags": ["terraform","ansible","infrastructure"]
+    "tags": ["terraform","ansible","infrastructure"],
+    "role": "sre"
   },
   {
-    "title": "Log Aggregation & Analysis",
-    "description": "ELK stack with automated alerting rules, real-time dashboards, and log parsing for incident detection.",
+    "title": "Observability Platform",
+    "description": "End-to-end monitoring stack with Prometheus, Grafana, alerting playbooks and synthetic checks.",
     "link": "#",
     "image": "assets/images/screenshot.svg",
-    "tags": ["elasticsearch","kibana","logging"]
+    "tags": ["prometheus","grafana","monitoring"],
+    "role": "sre"
   },
   {
     "title": "Auto-scaling Kubernetes Operator",
     "description": "Custom operator that adjusts resources based on SLO-driven signals and cost targets.",
     "link": "#",
     "image": "assets/images/diagram.svg",
-    "tags": ["kubernetes","operator","go"]
-  },
-  {
-    "title": "Observability Platform",
-    "description": "End-to-end monitoring stack with alerting playbooks and synthetic checks.",
-    "link": "#",
-    "image": "assets/images/screenshot.svg",
-    "tags": ["prometheus","grafana","monitoring"]
+    "tags": ["kubernetes","operator","go"],
+    "role": "sre"
   },
   {
     "title": "Runbook Automation",
     "description": "Automated incident runbooks integrated with Slack and PagerDuty to reduce MTTR.",
     "link": "#",
     "image": "assets/images/screenshot.svg",
-    "tags": ["automation","pagerduty","playbooks"]
+    "tags": ["automation","pagerduty","playbooks"],
+    "role": "sre"
   },
   {
-    "title": "CI/CD Pipeline Optimization",
-    "description": "GitHub Actions workflows with caching, parallel jobs, and automated security scanning.",
-    "link": "#",
-    "image": "assets/images/diagram.svg",
-    "tags": ["github-actions","ci-cd","automation"]
-  }
-  ,
-  {
-    "title": "React Web App — Internal Dashboard",
-    "description": "Single-page React dashboard with TypeScript, reusable components, and API-driven charts. Deployed with CI/CD and feature flags.",
+    "title": "Responsive Portfolio SPA",
+    "description": "Vite + React SPA with headless CMS, performant UI and CI/CD for fast deploys and content editing.",
     "link": "#",
     "image": "assets/images/screenshot.svg",
-    "tags": ["react","typescript","web"]
+    "tags": ["react","vite","web"],
+    "role": "web"
   },
   {
-    "title": "QA Automation Suite",
-    "description": "End-to-end test suite using Cypress and Playwright with CI parallelization and flaky-test mitigation.",
+    "title": "Internal Dashboard (React + TS)",
+    "description": "Single-page dashboard with TypeScript, API-driven charts, feature flags and automated deployments.",
     "link": "#",
     "image": "assets/images/diagram.svg",
-    "tags": ["cypress","playwright","qa"]
+    "tags": ["react","typescript","dashboard"],
+    "role": "web"
+  },
+  {
+    "title": "E‑commerce POC",
+    "description": "SSR product pages and optimized checkout flow with performance budgets and accessibility audits.",
+    "link": "#",
+    "image": "assets/images/screenshot.svg",
+    "tags": ["ssr","performance","web"],
+    "role": "web"
+  },
+  {
+    "title": "CI‑Gated E2E & API Test Suite",
+    "description": "Playwright tests running in CI with parallelization, flaky-test mitigation and HTML reporting.",
+    "link": "#",
+    "image": "assets/images/diagram.svg",
+    "tags": ["playwright","e2e","qa"],
+    "role": "qa"
+  },
+  {
+    "title": "Contract Testing Harness",
+    "description": "Consumer-driven contract tests to prevent API regressions and speed integration between services.",
+    "link": "#",
+    "image": "assets/images/diagram.svg",
+    "tags": ["contracts","pact","qa"],
+    "role": "qa"
+  },
+  {
+    "title": "Performance Smoke Tests",
+    "description": "Lightweight performance checks in CI (TTFB, Lighthouse) to detect regressions early.",
+    "link": "#",
+    "image": "assets/images/screenshot.svg",
+    "tags": ["lighthouse","performance","qa"],
+    "role": "qa"
   }
 ]

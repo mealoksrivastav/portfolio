@@ -15,7 +15,6 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
       <button class="color-toggle" id="colorToggle" aria-label="Toggle dynamic colors">🎨</button>
       <nav class="site-nav" id="siteNav">
-        <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -34,52 +33,34 @@
             <a class="btn secondary" href="#contact">Contact</a>
           </div>
         </div>
-        
-        <div class="metrics">
-          <div class="metric">
-            <div class="metric-value" data-key="uptime">0</div>
-            <div class="metric-label">Uptime (%)</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value" data-key="incidents_per_month">0</div>
-            <div class="metric-label">Avg Incidents / mo</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value" data-key="mttr_minutes">0</div>
-            <div class="metric-label">MTTR (mins)</div>
-          </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="assets/images/avatar.jpg" alt="Your Name photo">
         </div>
       </div>
     </section>
 
-    <section id="about" class="container about">
-      <h2>About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm an SRE focused on creating scalable, observable, and automated systems. I design runbooks, build CI/CD pipelines, and reduce toil through automation. I enjoy postmortems that improve systems and teams.</p>
+    <section id="roles" class="container roles">
+      <h2>Roles</h2>
+      <p class="lede">Three areas I work in — sample projects listed below. Click any item to filter the full project list.</p>
+      <div class="roles-grid">
+        <div class="role-section" id="role-sre">
+          <h3>SRE</h3>
+          <div class="role-list" id="roles-sre"></div>
         </div>
-        <div class="about-image">
-          <img src="assets/images/avatar.jpg" alt="Your Name avatar">
+
+        <div class="role-section" id="role-web">
+          <h3>Web Development</h3>
+          <div class="role-list" id="roles-web"></div>
         </div>
-      </div>
-      <div class="section-projects">
-        <h3>SRE — Sample Projects</h3>
-        <div class="project-row">
-          <article class="project-card" data-role="sre">
-            <h4>Autoscaling Observability Stack</h4>
-            <p>Infra-as-code k8s cluster with Prometheus/Grafana, alerting, and runbooks.</p>
-          </article>
-          <article class="project-card" data-role="sre">
-            <h4>Incident Response Automation</h4>
-            <p>Automated alert routing, playbooks, and on-call runbook integrations with Slack.</p>
-          </article>
-          <article class="project-card" data-role="sre">
-            <h4>Multi-region Failover</h4>
-            <p>Warm-standby failover with Terraform, health-checks, and DNS failover tests.</p>
-          </article>
+
+        <div class="role-section" id="role-qa">
+          <h3>QA Automation</h3>
+          <div class="role-list" id="roles-qa"></div>
         </div>
       </div>
     </section>
+
+    
 
     <section id="skills" class="container skills">
       <h2>Skills</h2>
