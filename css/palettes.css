@@ -1,0 +1,3 @@
+/* Optional separate palette helpers (kept small) */
+.pulse-accent{animation:accentPulse 6s infinite linear}
+@keyframes accentPulse{0%{filter:brightness(1)}50%{filter:brightness(1.12)}100%{filter:brightness(1)}}

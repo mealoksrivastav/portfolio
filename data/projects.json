@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Infrastructure as Code Pipeline",
+    "description": "Terraform + Ansible automation for multi-cloud deployments with drift detection and auto-remediation.",
+    "link": "#",
+    "image": "assets/images/diagram.svg",
+    "tags": ["terraform","ansible","infrastructure"]
+  },
+  {
+    "title": "Log Aggregation & Analysis",
+    "description": "ELK stack with automated alerting rules, real-time dashboards, and log parsing for incident detection.",
+    "link": "#",
+    "image": "assets/images/screenshot.svg",
+    "tags": ["elasticsearch","kibana","logging"]
+  },
+  {
+    "title": "Auto-scaling Kubernetes Operator",
+    "description": "Custom operator that adjusts resources based on SLO-driven signals and cost targets.",
+    "link": "#",
+    "image": "assets/images/diagram.svg",
+    "tags": ["kubernetes","operator","go"]
+  },
+  {
+    "title": "Observability Platform",
+    "description": "End-to-end monitoring stack with alerting playbooks and synthetic checks.",
+    "link": "#",
+    "image": "assets/images/screenshot.svg",
+    "tags": ["prometheus","grafana","monitoring"]
+  },
+  {
+    "title": "Runbook Automation",
+    "description": "Automated incident runbooks integrated with Slack and PagerDuty to reduce MTTR.",
+    "link": "#",
+    "image": "assets/images/screenshot.svg",
+    "tags": ["automation","pagerduty","playbooks"]
+  },
+  {
+    "title": "CI/CD Pipeline Optimization",
+    "description": "GitHub Actions workflows with caching, parallel jobs, and automated security scanning.",
+    "link": "#",
+    "image": "assets/images/diagram.svg",
+    "tags": ["github-actions","ci-cd","automation"]
+  }
+  ,
+  {
+    "title": "React Web App — Internal Dashboard",
+    "description": "Single-page React dashboard with TypeScript, reusable components, and API-driven charts. Deployed with CI/CD and feature flags.",
+    "link": "#",
+    "image": "assets/images/screenshot.svg",
+    "tags": ["react","typescript","web"]
+  },
+  {
+    "title": "QA Automation Suite",
+    "description": "End-to-end test suite using Cypress and Playwright with CI parallelization and flaky-test mitigation.",
+    "link": "#",
+    "image": "assets/images/diagram.svg",
+    "tags": ["cypress","playwright","qa"]
+  }
+]

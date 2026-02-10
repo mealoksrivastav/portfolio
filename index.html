@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — SRE Portfolio</title>
+  <meta name="description" content="SRE portfolio showcasing reliability practices, projects and contact." />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Your Name</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="color-toggle" id="colorToggle" aria-label="Toggle dynamic colors">🎨</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <h1>Reliability Engineer (SRE)</h1>
+          <p class="lede">I build and run resilient systems: observability, automation, incident response, and capacity planning.</p>
+          <div class="ctas">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+        
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value" data-key="uptime">0</div>
+            <div class="metric-label">Uptime (%)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-key="incidents_per_month">0</div>
+            <div class="metric-label">Avg Incidents / mo</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-key="mttr_minutes">0</div>
+            <div class="metric-label">MTTR (mins)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm an SRE focused on creating scalable, observable, and automated systems. I design runbooks, build CI/CD pipelines, and reduce toil through automation. I enjoy postmortems that improve systems and teams.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/images/avatar.jpg" alt="Your Name avatar">
+        </div>
+      </div>
+      <div class="section-projects">
+        <h3>SRE — Sample Projects</h3>
+        <div class="project-row">
+          <article class="project-card" data-role="sre">
+            <h4>Autoscaling Observability Stack</h4>
+            <p>Infra-as-code k8s cluster with Prometheus/Grafana, alerting, and runbooks.</p>
+          </article>
+          <article class="project-card" data-role="sre">
+            <h4>Incident Response Automation</h4>
+            <p>Automated alert routing, playbooks, and on-call runbook integrations with Slack.</p>
+          </article>
+          <article class="project-card" data-role="sre">
+            <h4>Multi-region Failover</h4>
+            <p>Warm-standby failover with Terraform, health-checks, and DNS failover tests.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>Monitoring & Observability (Prometheus, Grafana, Datadog)</li>
+        <li>Cloud & Infra (AWS, GCP, Terraform, Kubernetes)</li>
+        <li>CI/CD & Automation (GitHub Actions, Jenkins, Ansible)</li>
+        <li>Incident Response & SLOs</li>
+        <li>Systems Programming & Tooling (Go, Python, Bash)</li>
+        <li>Web Development (React, Node.js, TypeScript)</li>
+        <li>QA Automation (Selenium, Cypress, Playwright)</li>
+      </ul>
+    </section>
+
+    <section id="web" class="container webdev">
+      <h2>Web Development</h2>
+      <p>Frontend and backend web development: building performant UIs, REST/GraphQL APIs, and production-ready services with strong observability and CI/CD.</p>
+      <ul>
+        <li>Frontend: React, TypeScript, Vite</li>
+        <li>Backend: Node.js, Express, Fastify</li>
+        <li>APIs: REST, GraphQL, OpenAPI</li>
+        <li>Deployment: Docker, Kubernetes, Cloud Run</li>
+      </ul>
+      <div class="section-projects">
+        <h3>Web — Sample Projects</h3>
+        <div class="project-row">
+          <article class="project-card" data-role="web">
+            <h4>Responsive Portfolio SPA</h4>
+            <p>Vite + React SPA with headless CMS and CI/CD for fast deploys and content editing.</p>
+          </article>
+          <article class="project-card" data-role="web">
+            <h4>E‑commerce POC</h4>
+            <p>Server-rendered product pages, shopping cart, and payment integration with strong performance budgets.</p>
+          </article>
+          <article class="project-card" data-role="web">
+            <h4>Blog Platform (SSR)</h4>
+            <p>Markdown-driven blog with SSR for SEO and incremental static regeneration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="qa" class="container qa">
+      <h2>QA Automation</h2>
+      <p>Quality engineering and test automation: end-to-end, integration, and flaky-test reduction strategies with CI integration and reporting.</p>
+      <ul>
+        <li>Tools: Cypress, Playwright, Selenium</li>
+        <li>Techniques: BDD, contract testing, synthetic checks</li>
+        <li>CI Integration: parallel runs, caching, test impact analysis</li>
+      </ul>
+      <div class="section-projects">
+        <h3>QA — Sample Projects</h3>
+        <div class="project-row">
+          <article class="project-card" data-role="qa">
+            <h4>CI‑Gated E2E Suite</h4>
+            <p>Playwright tests running in CI with parallelization and HTML/Allure reporting.</p>
+          </article>
+          <article class="project-card" data-role="qa">
+            <h4>Contract Testing Harness</h4>
+            <p>Consumer-driven contract tests to prevent API regressions between services.</p>
+          </article>
+          <article class="project-card" data-role="qa">
+            <h4>Performance Smoke Tests</h4>
+            <p>Lightweight performance checks in CI to detect regressions early (TTFB, Lighthouse).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Selected Projects</h2>
+      <div class="project-filters" role="tablist">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sre">SRE</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="qa">QA Automation</button>
+      </div>
+
+      <div id="projectsList" class="project-grid">
+        <article class="project-card">
+          <h3>Autoscaling Observability Stack</h3>
+          <div class="project-meta">Role: <span>SRE</span></div>
+          <div data-role="sre"></div>
+          <p><strong>Category:</strong> SRE — build an autoscaling microservice platform with full observability and automated recovery.</p>
+          <p><strong>Highlights:</strong> Kubernetes + Terraform infra-as-code, Prometheus & Grafana dashboards, alerting rules, runbooks, and chaos engineering tests.</p>
+          <p><strong>Tech:</strong> Kubernetes, Helm, Terraform, Prometheus, Grafana, Loki/ELK, Chaos Toolkit</p>
+          <p class="project-links"><a href="#">Repo</a> · <a href="#">Demo / Docs</a></p>
+        </article>
+
+        <article class="project-card">
+          <h3>Responsive Portfolio SPA with CMS</h3>
+          <div class="project-meta">Role: <span>Web</span></div>
+          <div data-role="web"></div>
+          <p><strong>Category:</strong> Web Development — a performant, accessible single-page portfolio with CMS-driven content and CI/CD.</p>
+          <p><strong>Highlights:</strong> Fast Lighthouse scores, headless CMS for editing, automated deployment pipeline, and SSR option for SEO.</p>
+          <p><strong>Tech:</strong> React (or Svelte), Vite, Tailwind CSS, Sanity/Contentful, GitHub Actions, Vercel/Netlify</p>
+          <p class="project-links"><a href="#">Repo</a> · <a href="#">Live</a></p>
+        </article>
+
+        <article class="project-card">
+          <h3>CI-Gated E2E & API Test Suite</h3>
+          <div class="project-meta">Role: <span>QA</span></div>
+          <div data-role="qa"></div>
+          <p><strong>Category:</strong> QA Automation — end-to-end and API automation with flaky-test mitigation and test reporting in CI.</p>
+          <p><strong>Highlights:</strong> Parallel test runs, HTML/Allure reports, test fixtures & mocking, flaky-test detection and retries.</p>
+          <p><strong>Tech:</strong> Playwright / Cypress, pytest (API), Docker, GitHub Actions, Allure reports</p>
+          <p class="project-links"><a href="#">Repo</a> · <a href="#">Report</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Interested in collaborating or hiring? Email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+      <p><a class="btn" href="#">Download Resume</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; Your Name — Site optimized for accessibility and reliability.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

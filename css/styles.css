@@ -1,0 +1,149 @@
+/* Simple responsive SRE portfolio */
+:root{
+  --bg:#0f1720;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#2dd4bf;
+  --glass: rgba(255,255,255,0.03);
+  --max:1100px;
+  --gap:1.25rem;
+  color-scheme: dark;
+}
+
+/* Light theme overrides */
+.light-theme{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #4b5563;
+  --accent: #0ea5a4;
+  --glass: rgba(2,6,23,0.02);
+  color-scheme: light;
+}
+
+/* Soothing theme: soft seafoam / slate */
+.soothing-theme{
+  --bg: linear-gradient(180deg,#e8f9f6 0%, #f6eefc 100%);
+  --card: linear-gradient(180deg,#ffffff 0%, #f7fbfa 100%);
+  --muted: #51656a;
+  --accent: #ff6b9f;
+  --glass: rgba(255,107,159,0.06);
+  color-scheme: light;
+}
+
+/* override body background for a more colorful soothing look */
+.soothing-theme body, body.soothing-theme{
+  background: var(--bg);
+  color: #052826;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,#07101a 0%, #071827 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--max);margin:0 auto;padding:1.25rem}
+@media(max-width:640px){.container{padding:0.75rem}}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.site-header{backdrop-filter: blur(6px);position:sticky;top:0;background:transparent;padding:0.5rem 0}
+.nav-toggle{display:none;background:none;border:0;color:inherit;font-size:1.25rem}
+.theme-toggle{display:none;background:none;border:0;color:inherit;font-size:1.15rem;margin-left:.5rem}
+.site-nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 280px;gap:var(--gap);align-items:center}
+.hero-card h1{margin:0 0 .5rem;font-size:1.75rem;line-height:1.2}
+@media(max-width:768px){.hero-card h1{font-size:1.4rem}}
+@media(max-width:640px){.hero-card h1{font-size:1.2rem}}
+.ctas{display:flex;gap:0.5rem;flex-wrap:wrap}
+@media(max-width:640px){.ctas{flex-direction:column;gap:0.75rem}}
+h2{font-size:1.5rem;margin:0 0 1rem;line-height:1.3}
+@media(max-width:768px){h2{font-size:1.3rem}}
+@media(max-width:640px){h2{font-size:1.1rem;margin-bottom:0.75rem}}
+.hero-image{text-align:center;margin:0 auto;max-width:220px}
+.hero-image img{width:100%;height:auto;border-radius:16px;background:var(--card);padding:1rem;border:2px solid var(--accent)}
+.lede{color:var(--muted);margin:0 0 1rem;font-size:1rem}
+@media(max-width:640px){.lede{font-size:0.95rem}}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#012; text-decoration:none;font-weight:600;font-size:1rem;touch-action:manipulation;cursor:pointer;border:none}
+.btn:active{transform:scale(0.98)}
+@media(max-width:640px){.btn{padding:.7rem 1.1rem;font-size:0.95rem;width:100%;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.metrics{display:flex;flex-direction:column;gap:.75rem}
+.metric{background:var(--card);padding:1rem;border-radius:8px;text-align:center}
+.metric-value{font-size:1.25rem;font-weight:700}
+.metric-label{color:var(--muted);font-size:.875rem}
+@media(max-width:640px){.metric{padding:0.8rem}.metric-value{font-size:1rem}.metric-label{font-size:0.75rem}}
+.about, .skills, .projects, .contact{padding:2rem 0}
+@media(max-width:640px){.about, .skills, .projects, .contact{padding:1.5rem 0}}
+.skill-list{columns:2;gap:1rem;list-style:none;padding:0;margin:0;color:var(--muted)}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project{background:var(--glass);padding:1rem;border-radius:8px}
+.project-link{display:inline-block;margin-top:.5rem;color:var(--accent)}
+.about-grid{display:flex;align-items:center;gap:1.25rem;margin-top:0.5rem}
+.about-text{flex:1;min-width:0}
+.about-image{width:220px;flex-shrink:0}
+.about-image img{width:100%;height:auto;border-radius:12px;border:2px solid var(--accent);background:var(--card);padding:.5rem}
+.site-footer{padding:1.5rem 0;color:var(--muted)}
+@media(max-width:640px){.site-footer{padding:1rem 0;font-size:0.85rem}}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .project-grid{grid-template-columns:1fr 1fr}
+  .hero-image{max-width:180px;margin-bottom:1rem}
+}
+@media(max-width:768px){
+  .site-nav a{margin-left:0.5rem;font-size:0.9rem}
+  .site-header{padding:0.75rem 0}
+}
+@media(max-width:640px){
+  .nav-toggle{display:block;width:44px;height:44px;padding:8px;font-size:1.5rem;cursor:pointer}
+  .theme-toggle{display:block;width:44px;height:44px;padding:8px;font-size:1.2rem;margin-left:0}
+  .color-toggle{display:block;width:44px;height:44px;padding:8px;font-size:1.2rem}
+  .site-nav{display:none;position:absolute;right:0;top:50px;background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:50}
+  .site-nav a{display:block;margin:0;padding:0.6rem 0;font-size:0.95rem}
+  .project-grid{grid-template-columns:1fr;gap:0.75rem}
+  .skill-list{columns:1;gap:0.5rem}
+  .hero-card{padding:0.75rem}
+  .hero-image{max-width:140px;margin-bottom:1rem}
+  .metrics{gap:0.5rem}
+}
+
+/* Improve hero responsiveness and metrics layout */
+.hero-card{padding:1rem}
+.metrics{display:flex;flex-direction:row;gap:0.75rem;flex-wrap:wrap}
+.metric{flex:1;min-width:110px}
+.dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.dash-grid .card{background:var(--card);padding:1rem;border-radius:8px}
+@media(max-width:900px){
+  .dash-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .dash-grid{grid-template-columns:1fr}
+}
+
+/* Dynamic color support: CSS variables used by JS to update palette */
+:root{ --accent-2: #7cdbd3; --accent-3: #ffd6e0 }
+
+.dynamic-colors{ /* lighter overlay when active */ }
+
+.color-toggle{display:none;background:none;border:0;color:inherit;font-size:1.15rem;margin-left:.35rem}
+
+/* Smooth transition when switching themes and accents */
+body{transition:background .25s ease,color .2s ease}
+
+/* Mobile form improvements */
+@media(max-width:640px){
+  .ctas{flex-direction:column}
+}
+
+/* Extra small screens */
+@media(max-width:480px){
+  .container{padding:0.5rem}
+  .hero{padding:1.5rem 0}
+  .hero-card h1{font-size:1.1rem}
+  .lede{font-size:0.9rem}
+  .project{padding:0.75rem}
+  .metric{min-width:80px;padding:0.6rem}
+}
+
