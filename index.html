@@ -3,14 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — SRE Portfolio</title>
+  <title>Alok Srivastav | DevOps Engineer</title>
   <meta name="description" content="SRE portfolio showcasing reliability practices, projects and contact." />
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Project card expand/collapse */
+    .project-card{cursor:pointer}
+    .project-card .project-details{display:none;margin-top:.5rem}
+    .project-card.expanded .project-details{display:block}
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">Your Name</a>
+      <a class="brand" href="#">Alok Srivastav | DevOps Engineer</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
       <button class="color-toggle" id="colorToggle" aria-label="Toggle dynamic colors">🎨</button>
@@ -26,7 +32,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-card">
-          <h1>Reliability Engineer (SRE)</h1>
+          <h1>Alok Srivastav | DevOps Engineer</h1>
           <p class="lede">I build and run resilient systems: observability, automation, incident response, and capacity planning.</p>
           <div class="ctas">
             <a class="btn" href="#projects">View Projects</a>
@@ -37,6 +43,15 @@
           <img src="assets/images/avatar.jpg" alt="Your Name photo">
         </div>
       </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Me</h2>
+      <ul class="platforms">
+        <li><a id="platform-google" href="#">Google Sites</a></li>
+        <li><a id="platform-github" href="#">GitHub Pages</a></li>
+        <li><a id="platform-blogger" href="#">Blogger</a></li>
+      </ul>
     </section>
 
     <section id="roles" class="container roles">
@@ -144,30 +159,36 @@
           <h3>Autoscaling Observability Stack</h3>
           <div class="project-meta">Role: <span>SRE</span></div>
           <div data-role="sre"></div>
-          <p><strong>Category:</strong> SRE — build an autoscaling microservice platform with full observability and automated recovery.</p>
-          <p><strong>Highlights:</strong> Kubernetes + Terraform infra-as-code, Prometheus & Grafana dashboards, alerting rules, runbooks, and chaos engineering tests.</p>
-          <p><strong>Tech:</strong> Kubernetes, Helm, Terraform, Prometheus, Grafana, Loki/ELK, Chaos Toolkit</p>
-          <p class="project-links"><a href="#">Repo</a> · <a href="#">Demo / Docs</a></p>
+          <div class="project-details">
+            <p><strong>Category:</strong> SRE — build an autoscaling microservice platform with full observability and automated recovery.</p>
+            <p><strong>Highlights:</strong> Kubernetes + Terraform infra-as-code, Prometheus & Grafana dashboards, alerting rules, runbooks, and chaos engineering tests.</p>
+            <p><strong>Tech:</strong> Kubernetes, Helm, Terraform, Prometheus, Grafana, Loki/ELK, Chaos Toolkit</p>
+            <p class="project-links"><a href="#">Repo</a> · <a href="#">Demo / Docs</a></p>
+          </div>
         </article>
 
         <article class="project-card">
           <h3>Responsive Portfolio SPA with CMS</h3>
           <div class="project-meta">Role: <span>Web</span></div>
           <div data-role="web"></div>
-          <p><strong>Category:</strong> Web Development — a performant, accessible single-page portfolio with CMS-driven content and CI/CD.</p>
-          <p><strong>Highlights:</strong> Fast Lighthouse scores, headless CMS for editing, automated deployment pipeline, and SSR option for SEO.</p>
-          <p><strong>Tech:</strong> React (or Svelte), Vite, Tailwind CSS, Sanity/Contentful, GitHub Actions, Vercel/Netlify</p>
-          <p class="project-links"><a href="#">Repo</a> · <a href="#">Live</a></p>
+          <div class="project-details">
+            <p><strong>Category:</strong> Web Development — a performant, accessible single-page portfolio with CMS-driven content and CI/CD.</p>
+            <p><strong>Highlights:</strong> Fast Lighthouse scores, headless CMS for editing, automated deployment pipeline, and SSR option for SEO.</p>
+            <p><strong>Tech:</strong> React (or Svelte), Vite, Tailwind CSS, Sanity/Contentful, GitHub Actions, Vercel/Netlify</p>
+            <p class="project-links"><a href="#">Repo</a> · <a href="#">Live</a></p>
+          </div>
         </article>
 
         <article class="project-card">
           <h3>CI-Gated E2E & API Test Suite</h3>
           <div class="project-meta">Role: <span>QA</span></div>
           <div data-role="qa"></div>
-          <p><strong>Category:</strong> QA Automation — end-to-end and API automation with flaky-test mitigation and test reporting in CI.</p>
-          <p><strong>Highlights:</strong> Parallel test runs, HTML/Allure reports, test fixtures & mocking, flaky-test detection and retries.</p>
-          <p><strong>Tech:</strong> Playwright / Cypress, pytest (API), Docker, GitHub Actions, Allure reports</p>
-          <p class="project-links"><a href="#">Repo</a> · <a href="#">Report</a></p>
+          <div class="project-details">
+            <p><strong>Category:</strong> QA Automation — end-to-end and API automation with flaky-test mitigation and test reporting in CI.</p>
+            <p><strong>Highlights:</strong> Parallel test runs, HTML/Allure reports, test fixtures & mocking, flaky-test detection and retries.</p>
+            <p><strong>Tech:</strong> Playwright / Cypress, pytest (API), Docker, GitHub Actions, Allure reports</p>
+            <p class="project-links"><a href="#">Repo</a> · <a href="#">Report</a></p>
+          </div>
         </article>
       </div>
     </section>
@@ -177,6 +198,8 @@
       <p>Interested in collaborating or hiring? Email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
       <p><a class="btn" href="#">Download Resume</a></p>
     </section>
+
+    
   </main>
 
   <footer class="site-footer">
@@ -186,5 +209,17 @@
   </footer>
 
   <script src="js/script.js" defer></script>
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Person",
+   "name": "Alok Srivastav",
+   "url": "https://sites.google.com/view/aloksrivastav",
+   "sameAs": [
+    "https://linkedin.com/in/aloksrivastav",
+    "https://github.com/aloksrivastav"
+   ]
+  }
+  </script>
 </body>
 </html>

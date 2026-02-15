@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded',function(){
         const card = document.createElement('article');
         card.className = 'project-card';
         card.dataset.role = p.role || 'web';
+        // compute slug for per-project page and set dataset.page
+        const slug = (p.title || '').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+        card.dataset.page = 'projects/' + slug + '.html';
         const img = document.createElement('img');
         img.src = p.image || 'assets/images/avatar.jpg';
         img.alt = p.title;
@@ -97,6 +100,8 @@ document.addEventListener('DOMContentLoaded',function(){
       // After projects load, animate metrics and apply current filter
       animateMetrics();
       applyProjectFilters(currentFilter || 'all');
+      // attach click handlers to toggle project details for both static and dynamic cards
+      attachProjectToggles();
     }).catch(err=>{
       projectsContainer.innerHTML = '<p style="color:#9aa4b2">Could not load projects.</p>';
       console.error('load projects error',err);
@@ -123,6 +128,25 @@ document.addEventListener('DOMContentLoaded',function(){
       b.setAttribute('aria-pressed', String(active));
     });
     currentFilter = role;
+  }
+
+  // Toggle project details when a card is clicked
+  function attachProjectToggles(){
+    const cards = document.querySelectorAll('#projectsList .project-card');
+    cards.forEach(card=>{
+      if(card.__toggleAttached) return;
+      card.__toggleAttached = true;
+      card.addEventListener('click', (e)=>{
+        // don't navigate when clicking an inner link
+        if(e.target.closest('a')) return;
+        const page = card.dataset.page;
+        if(page){
+          window.location.href = page;
+        }
+      });
+      // prevent inner links from triggering navigation
+      card.querySelectorAll('a').forEach(a=>a.addEventListener('click', (ev)=>ev.stopPropagation()));
+    });
   }
 
   // Wire buttons with accessibility helpers
@@ -242,5 +266,8 @@ document.addEventListener('DOMContentLoaded',function(){
       }
     });
   }
+
+  // ensure toggles are attached for static cards present before any dynamic load
+  attachProjectToggles();
 
 });

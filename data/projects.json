@@ -2,7 +2,7 @@
   {
     "title": "Infrastructure as Code Pipeline",
     "description": "Terraform + Ansible automation for multi-cloud deployments with drift detection and auto-remediation.",
-    "link": "#",
+    "link": "projects/infrastructure-as-code-pipeline.html",
     "image": "assets/images/diagram.svg",
     "tags": ["terraform","ansible","infrastructure"],
     "role": "sre"
@@ -10,7 +10,7 @@
   {
     "title": "Observability Platform",
     "description": "End-to-end monitoring stack with Prometheus, Grafana, alerting playbooks and synthetic checks.",
-    "link": "#",
+    "link": "projects/observability-platform.html",
     "image": "assets/images/screenshot.svg",
     "tags": ["prometheus","grafana","monitoring"],
     "role": "sre"
@@ -18,7 +18,7 @@
   {
     "title": "Auto-scaling Kubernetes Operator",
     "description": "Custom operator that adjusts resources based on SLO-driven signals and cost targets.",
-    "link": "#",
+    "link": "projects/auto-scaling-kubernetes-operator.html",
     "image": "assets/images/diagram.svg",
     "tags": ["kubernetes","operator","go"],
     "role": "sre"
@@ -26,7 +26,7 @@
   {
     "title": "Runbook Automation",
     "description": "Automated incident runbooks integrated with Slack and PagerDuty to reduce MTTR.",
-    "link": "#",
+    "link": "projects/runbook-automation.html",
     "image": "assets/images/screenshot.svg",
     "tags": ["automation","pagerduty","playbooks"],
     "role": "sre"
@@ -34,7 +34,7 @@
   {
     "title": "Responsive Portfolio SPA",
     "description": "Vite + React SPA with headless CMS, performant UI and CI/CD for fast deploys and content editing.",
-    "link": "#",
+    "link": "projects/responsive-portfolio-spa.html",
     "image": "assets/images/screenshot.svg",
     "tags": ["react","vite","web"],
     "role": "web"
@@ -42,7 +42,7 @@
   {
     "title": "Internal Dashboard (React + TS)",
     "description": "Single-page dashboard with TypeScript, API-driven charts, feature flags and automated deployments.",
-    "link": "#",
+    "link": "projects/internal-dashboard-react-ts.html",
     "image": "assets/images/diagram.svg",
     "tags": ["react","typescript","dashboard"],
     "role": "web"
@@ -50,7 +50,7 @@
   {
     "title": "E‑commerce POC",
     "description": "SSR product pages and optimized checkout flow with performance budgets and accessibility audits.",
-    "link": "#",
+    "link": "projects/ecommerce-poc.html",
     "image": "assets/images/screenshot.svg",
     "tags": ["ssr","performance","web"],
     "role": "web"
@@ -58,7 +58,7 @@
   {
     "title": "CI‑Gated E2E & API Test Suite",
     "description": "Playwright tests running in CI with parallelization, flaky-test mitigation and HTML reporting.",
-    "link": "#",
+    "link": "projects/ci-gated-e2e-api-test-suite.html",
     "image": "assets/images/diagram.svg",
     "tags": ["playwright","e2e","qa"],
     "role": "qa"
@@ -66,7 +66,7 @@
   {
     "title": "Contract Testing Harness",
     "description": "Consumer-driven contract tests to prevent API regressions and speed integration between services.",
-    "link": "#",
+    "link": "projects/contract-testing-harness.html",
     "image": "assets/images/diagram.svg",
     "tags": ["contracts","pact","qa"],
     "role": "qa"
@@ -74,7 +74,7 @@
   {
     "title": "Performance Smoke Tests",
     "description": "Lightweight performance checks in CI (TTFB, Lighthouse) to detect regressions early.",
-    "link": "#",
+    "link": "projects/performance-smoke-tests.html",
     "image": "assets/images/screenshot.svg",
     "tags": ["lighthouse","performance","qa"],
     "role": "qa"
