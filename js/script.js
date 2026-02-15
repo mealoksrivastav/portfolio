@@ -40,9 +40,8 @@ document.addEventListener('DOMContentLoaded',function(){
         const card = document.createElement('article');
         card.className = 'project-card';
         card.dataset.role = p.role || 'web';
-        // compute slug for per-project page and set dataset.page
-        const slug = (p.title || '').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-        card.dataset.page = 'projects/' + slug + '.html';
+        // set link to project's medium article URL
+        card.dataset.page = p.link;
         const img = document.createElement('img');
         img.src = p.image || 'assets/images/avatar.jpg';
         img.alt = p.title;

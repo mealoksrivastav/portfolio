@@ -2,7 +2,7 @@
   {
     "title": "Infrastructure as Code Pipeline",
     "description": "Terraform + Ansible automation for multi-cloud deployments with drift detection and auto-remediation.",
-    "link": "projects/infrastructure-as-code-pipeline.html",
+    "link": "https://medium.com/@aloksrivastav/infrastructure-as-code-pipeline",
     "image": "assets/images/diagram.svg",
     "tags": ["terraform","ansible","infrastructure"],
     "role": "sre"
@@ -10,7 +10,7 @@
   {
     "title": "Observability Platform",
     "description": "End-to-end monitoring stack with Prometheus, Grafana, alerting playbooks and synthetic checks.",
-    "link": "projects/observability-platform.html",
+    "link": "https://medium.com/@aloksrivastav/observability-platform",
     "image": "assets/images/screenshot.svg",
     "tags": ["prometheus","grafana","monitoring"],
     "role": "sre"
@@ -18,7 +18,7 @@
   {
     "title": "Auto-scaling Kubernetes Operator",
     "description": "Custom operator that adjusts resources based on SLO-driven signals and cost targets.",
-    "link": "projects/auto-scaling-kubernetes-operator.html",
+    "link": "https://medium.com/@aloksrivastav/auto-scaling-kubernetes-operator",
     "image": "assets/images/diagram.svg",
     "tags": ["kubernetes","operator","go"],
     "role": "sre"
@@ -26,7 +26,7 @@
   {
     "title": "Runbook Automation",
     "description": "Automated incident runbooks integrated with Slack and PagerDuty to reduce MTTR.",
-    "link": "projects/runbook-automation.html",
+    "link": "https://medium.com/@aloksrivastav/runbook-automation",
     "image": "assets/images/screenshot.svg",
     "tags": ["automation","pagerduty","playbooks"],
     "role": "sre"
@@ -34,7 +34,7 @@
   {
     "title": "Responsive Portfolio SPA",
     "description": "Vite + React SPA with headless CMS, performant UI and CI/CD for fast deploys and content editing.",
-    "link": "projects/responsive-portfolio-spa.html",
+    "link": "https://medium.com/@aloksrivastav/responsive-portfolio-spa",
     "image": "assets/images/screenshot.svg",
     "tags": ["react","vite","web"],
     "role": "web"
@@ -42,7 +42,7 @@
   {
     "title": "Internal Dashboard (React + TS)",
     "description": "Single-page dashboard with TypeScript, API-driven charts, feature flags and automated deployments.",
-    "link": "projects/internal-dashboard-react-ts.html",
+    "link": "https://medium.com/@aloksrivastav/internal-dashboard-react-ts",
     "image": "assets/images/diagram.svg",
     "tags": ["react","typescript","dashboard"],
     "role": "web"
@@ -50,7 +50,7 @@
   {
     "title": "E‑commerce POC",
     "description": "SSR product pages and optimized checkout flow with performance budgets and accessibility audits.",
-    "link": "projects/ecommerce-poc.html",
+    "link": "https://medium.com/@aloksrivastav/ecommerce-poc",
     "image": "assets/images/screenshot.svg",
     "tags": ["ssr","performance","web"],
     "role": "web"
@@ -58,23 +58,23 @@
   {
     "title": "CI‑Gated E2E & API Test Suite",
     "description": "Playwright tests running in CI with parallelization, flaky-test mitigation and HTML reporting.",
-    "link": "projects/ci-gated-e2e-api-test-suite.html",
+    "link": "https://medium.com/@aloksrivastav/ci-gated-e2e-api-test-suite",
     "image": "assets/images/diagram.svg",
     "tags": ["playwright","e2e","qa"],
     "role": "qa"
   },
   {
-    "title": "Contract Testing Harness",
+    "title": "Realtime Test Execution dashboard using Kibana",
     "description": "Consumer-driven contract tests to prevent API regressions and speed integration between services.",
-    "link": "projects/contract-testing-harness.html",
+    "link": "https://medium.com/@me-aloksrivastav/realtime-test-execution-dashboard-using-kibana-4de17fff04a2",
     "image": "assets/images/diagram.svg",
     "tags": ["contracts","pact","qa"],
     "role": "qa"
   },
   {
-    "title": "Performance Smoke Tests",
+    "title": "Self Healing Tests with Selenium & python",
     "description": "Lightweight performance checks in CI (TTFB, Lighthouse) to detect regressions early.",
-    "link": "projects/performance-smoke-tests.html",
+    "link": "https://medium.com/@me-aloksrivastav/self-healing-tests-with-selenium-python-577ec4dbad75",
     "image": "assets/images/screenshot.svg",
     "tags": ["lighthouse","performance","qa"],
     "role": "qa"
