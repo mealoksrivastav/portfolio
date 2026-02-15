@@ -9,7 +9,7 @@
 ### Replace your name & contact
 Edit `index.html`:
 - Line 15: `<a class="brand" href="#">Your Name</a>` → your name
-- Line 101: `<a href="mailto:you@example.com">you@example.com</a>` → your email
+- Line 101: `<a href="mailto:mealoksrivastav@gmail.com">mealoksrivastav@gmail.com</a>` → your email
 - Line 102: Update resume link in `<a class="btn" href="#">Download Resume</a>`
 
 ### Update About & Skills
